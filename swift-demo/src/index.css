@@ -1,0 +1,290 @@
+/* src/index.css */
+
+/* Basic Resets & Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* A more common fallback */
+  background-color: #f1f5f9; /* Light grey background */
+  color: #334155; /* Default text color (slate-700 approx) */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+.bg-container{
+  margin:30px;
+  background-color: #475569; /* slate-600 */
+  
+  padding:20px;
+}
+
+.navbar-bg{
+  display: flex;
+  justify-content: space-between;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e293b; /* Dark slate-800 */
+  padding: 1rem 1.5rem; /* px-6 py-3 */
+}
+
+.navbar-logo {
+  color: #22c55e; /* Green-500 */
+  font-weight: 600; /* font-semibold */
+  font-size: 1.25rem; /* text-xl */
+}
+
+.navbar-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  color: white;
+}
+
+.navbar-profile-avatar {
+  border-radius: 9999px; /* rounded-full */
+  background-color: #ffffff; /* slate-600 */
+  width: 2rem; /* w-8 */
+  height: 2rem; /* h-8 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 700; /* font-bold */
+  color: #475569; /* slate-600 */
+  
+}
+
+.navbar-profile-name {
+  display: none; /* hidden */
+}
+
+@media (min-width: 640px) { /* sm:inline */
+  .navbar-profile-name {
+    display: inline;
+  }
+}
+
+
+/* Page Layout */
+.page-container {
+  padding: 2rem; /* p-8 */
+}
+
+/* Profile Page */
+.profile-back-link {
+  color: #475569; /* slate-600 */
+  font-weight: 750;
+  font-size: 24px;
+}
+
+.profile-card {
+  margin-top: 1.5rem; /* mt-6 */
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow */
+  border-radius: 0.5rem; /* rounded-lg */
+  padding: 2rem; /* p-8 */
+  max-width: 56rem; /* max-w-4xl (approx) */
+  margin-left: auto; /* To center with max-width */
+  margin-right: auto; /* To center with max-width */
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.profile-avatar-large {
+  border-radius: 9999px; /* rounded-full */
+  background-color: #e2e8f0; /* slate-200 */
+  width: 4rem; /* w-16 */
+  height: 4rem; /* h-16 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+}
+
+.profile-info h2 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin: 0;
+}
+
+.profile-info p {
+  font-size: 0.875rem; /* text-sm */
+  color: #64748b; /* slate-500 */
+  margin: 0;
+}
+
+.profile-fields {
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 1.5rem; /* gap-6 */
+}
+
+@media (min-width: 640px) { /* sm:grid-cols-2 */
+  .profile-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.profile-field-item p {
+  font-size: 0.75rem; /* text-xs */
+  color: #64748b; /* slate-500 */
+  margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.profile-field-value {
+  background-color: #f1f5f9; /* slate-100 */
+  border-radius: 0.25rem; /* rounded */
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+/* Comments Dashboard */
+.dashboard-header {
+  display: flex;
+  flex-direction: column; /* flex-col */
+  gap: 1rem; /* gap-4 */
+  justify-content: space-between;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+@media (min-width: 640px) { /* sm:flex-row */
+  .dashboard-header {
+    flex-direction: row;
+  }
+}
+
+.sort-buttons-container {
+  display: flex;
+  gap: 0.5rem; /* gap-2 */
+}
+
+.sort-button {
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 0.25rem; /* rounded */
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  font-size: 0.875rem; /* text-sm */
+  background-color: #f8fafc; /* slate-50 */
+  white-space: nowrap; /* Prevent wrapping on small buttons */
+}
+
+/* Search Input */
+.search-input {
+  border: 1px solid #cbd5e1; /* border */
+  border-radius: 0.25rem; /* rounded */
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  width: 100%; /* w-full */
+}
+
+@media (min-width: 640px) { /* sm:w-64 */
+  .search-input {
+    width: 16rem; /* 256px */
+  }
+}
+
+/* Data Table */
+.data-table-container {
+  overflow-x: auto; /* overflow-x-auto */
+}
+
+.data-table {
+  min-width: 100%; /* min-w-full */
+  border-collapse: collapse; /* border-collapse */
+  background-color: white; /* To ensure white background for the table rows */
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden; /* Ensures rounded corners apply to content */
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* subtle shadow */
+}
+
+.data-table thead tr {
+  background-color: #e2e8f0; /* slate-200 */
+  text-align: left; /* text-left */
+  font-size: 0.75rem; /* text-xs */
+  text-transform: uppercase; /* uppercase */
+}
+
+.data-table th {
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  font-weight: 500; /* font-medium */
+}
+
+.data-table tbody tr {
+  border-top: 1px solid #e2e8f0; /* border-t */
+}
+
+.data-table td {
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  vertical-align: top; /* Align content to top for longer comments */
+}
+
+
+/* Dashboard Footer (Pagination and Page Size) */
+.dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem; /* mt-4 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+.dashboard-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+}
+
+.page-size-select {
+  border: 1px solid #cbd5e1; /* border */
+  border-radius: 0.25rem; /* rounded */
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  background-color: white; /* Ensure consistent background */
+}
+
+/* Pagination Component */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 */
+}
+
+.pagination-button {
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 0.25rem; /* rounded */
+  background-color: white; /* Default state */
+  color: #334155; /* Default text color */
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button.active {
+  background-color: #1e293b; /* slate-800 */
+  color: white;
+}
+
+/* Specific button width for number buttons */
+.pagination-button-number {
+  padding: 0.25rem 0.75rem; /* px-3 py-1 for number buttons */
+}
